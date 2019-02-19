@@ -1,0 +1,39 @@
+<h1> Resultats de la recherche</h1>
+<div class="container">
+  <div class="service-card-container">
+    <% @services.each do |service| %>
+
+      <div class="service-title">
+        <p>service name: <%= service.name %></p>
+      </div>
+
+      <div class="service-card-infos">
+
+        <div class="service-card-avatar-small">
+          <p>photo: <%= service.user.photo %></p>
+        </div>
+
+        <div class="service-card-details">
+          <p>service user name: <%= service.user.name %></p>
+          <p>service description: <%= service.description %></p>
+          <p>service localisation: <%= service.address %></p>
+        </div>
+
+        <div class="service-card-validation">
+          <p>service prix: <%= service.price %></p>
+
+          <div class="service-card-button-resa">
+            <button class="btn btn-default" type="submit">Réserver</button>
+          </div>
+        </div>
+
+    <% end %>
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
