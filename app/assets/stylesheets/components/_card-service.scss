@@ -1,0 +1,90 @@
+.service-card-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  > .service-card-box {
+    flex: 0 0 400px;
+    margin: 10px;
+  }
+}
+
+.service-card-box {
+  // justify-self: center;
+  // display: flex;
+  // flex-direction: column;
+  border: 1px solid black;
+  padding: 10px;
+  min-height: 200px;
+  p {
+    margin: 0;
+  }
+  position: relative;
+  &:hover {
+    box-shadow: 0 0 4px rgba(50, 50, 50, 0.6);
+  }
+}
+
+.service-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: white;
+  font-size: 20px;
+}
+
+
+.service-card-avatar-small {
+  border-radius: 50%;
+
+}
+.service-card-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > div {
+    flex: 1 0 10%;
+  }
+  img, > div:nth-child(2) {
+    margin-right: 5px;
+  }
+}
+
+.service-card-validation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.service-card-details{
+
+  > p:nth-child(1) {
+    text-transform: uppercase;
+  }
+
+  > p:nth-child(2) {
+    font-size: 15px;
+  }
+
+  > p:nth-child(3) {
+    font-size: 12px;
+    font-weight: bolder;
+    text-transform: uppercase;
+  }
+
+}
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.service-card-button-resa {
+  position: relative;
+  z-index: 10;
+  width: 100px;
+}
+
+
