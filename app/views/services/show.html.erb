@@ -1,0 +1,46 @@
+  <div class="service-card-container-details">
+      <div class="service-card-box-details" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('/assets/<%= @service.category %>.jpg');">
+        <div class="service-title">
+          <%= @service.name %>
+        </div>
+        <div class="service-card-infos-details-1">
+          <%= image_tag "https://via.placeholder.com/50", class: "service-card-avatar-small" %>
+          <div class="service-card-details-details">
+            <p><%= @service.user.name %></p>
+            <p><%= @service.description %></p>
+            <p><%= @service.address %></p>
+          </div>
+          <div class="service-card-validation-details text-center">
+            <p><%= @service.price %>€</p>
+
+
+          <%= link_to "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModal'>Réservation</button>".html_safe, new_service_path(@service.id)%>
+
+
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">Réservez votre séance de <%#= @service.name %> avec <%#= @service.user.name %></h5>
+      </div>
+      <div class="modal-body">
+      <%#= simple_form_for [@booking] do |f| %>
+        <%#= f.input :date %>
+        <%#= f.submit "entrer la date", class: "btn btn-primary" %>
+       <% #end %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+        <button type="button" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+</div> -->
