@@ -1,4 +1,85 @@
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path 'background.jpg' %>);">
+  <div class="banner-content">
+    <h1>Find your coach</h1>
+    <a href="/services" class="btn-search">Search</a>
+  </div>
+</div>
 
 
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+  <div class="row home-description">
+    <h2>How It Works</h2>
+    <p>Get A Coach is the most convenient place for you to connect with a personal coach - wherever you are! Are you looking for a coach to push you to run your fastest 10k? Or have you always wanted to learn some fiery Zumba moves? Whatever your goals and interests are, we have the right coach for you!</p>
+    <div class="flex-container">
+      <div class="flex-item">
+        <a href="#"><i class="fas fa-search"></i>
+          <br class="montserrat">Find a Coach</a>
+      </div>
+      <div class="flex-item">
+        <a href="#" ><i class="fas fa-user-plus"></i>
+          <br class="montserrat">Sign Up</a>
+      </div>
+      <div class="flex-item">
+        <a href="#" ><i class="fas fa-calendar-check"></i>
+          <br class="montserrat">Book a Session</a>
+      </div>
+      <div class="flex-item">
+        <a href="#" ><i class="fas fa-dumbbell"></i>
+          <br class="montserrat">Get Fit!</a>
+      </div>
+    </div>
+  </div>
+  <h2 class="text-center">Our Coaches</h2>
+      <% @users.each do |user|%>
+        <div class="col-xs-12 col-lg-4 coach-card">
+            <%= image_tag "https://via.placeholder.com/150", class: "coach-card-avatar" %>
+            <h4><%= user.name %></h4>
+            <p><%= user.category %></p>
+        </div>
+      <% end %>
+    </div>
+</div>
+<div class="container">
+    <div class="row table">
+      <h2 class="text-center">Our Disciplines</h2>
+        <table style="width:100%">
+          <tr>
+            <td><a href="#">Basketball</a></td>
+            <td><a href="#">Running</a></td>
+            <td><a href="#">Tennis</a></td>
+            <td><a href="#">Zumba</a></td>
+            <td><a href="#">Kickboxing</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Frisbee</a></td>
+            <td><a href="#">Swimming</a></td>
+            <td><a href="#">Football</a></td>
+            <td><a href="#">Bowling</a></td>
+            <td><a href="#">Oriental Dance</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Bodybuilding</a></td>
+            <td><a href="#">Yoga</a></td>
+            <td><a href="#">Boxing</a></td>
+            <td><a href="#">Inline Skating</a></td>
+            <td><a href="#">Ballet</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Pilates</a></td>
+            <td><a href="#">Strength Training</a></td>
+            <td><a href="#">Curling</a></td>
+            <td><a href="#">Nordic Walking</a></td>
+            <td><a href="#">Calisthenics</a></td>
+          </tr>
+          <tr>
+            <td><a href="#">Roller Skating</a></td>
+            <td><a href="#">Salsa</a></td>
+            <td><a href="#">Jiu Jitsu</a></td>
+            <td><a href="#">Baseball</a></td>
+            <td><a href="#">Hip Hop</a></td>
+          </tr>
+        </table>
+    </div>
+</div>
+
+
