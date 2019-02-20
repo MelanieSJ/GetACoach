@@ -33,10 +33,13 @@
       <% @users.each do |user|%>
         <div class="col-xs-12 col-lg-4 coach-card">
             <%= image_tag "https://via.placeholder.com/150", class: "coach-card-avatar" %>
-            <h4><%= user.name %></h4>
+            <h4><%=link_to user.name, user_path(user) %></h4>
             <p><%= user.category %></p>
         </div>
-      <% end %>
+        <% end %>
+    </div>
+    <div class="row button">
+      <a href="/users" class="btn-coaches text-center">See all Coaches</a>
     </div>
 </div>
 <div class="container">

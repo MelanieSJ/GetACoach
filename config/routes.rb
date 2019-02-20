@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   resources :bookings, only: [:index]
   get '/dashboard', to: 'bookings#dashboard'
+  get '/users', to: 'pages#user_index'
+  get '/user/:id', to: 'pages#user_show', as: :user
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
