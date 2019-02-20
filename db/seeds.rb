@@ -21,7 +21,7 @@ kevin = User.new({
     name:         'Kevin',
     city:         'Paris',
     age:           30,
-    category:     'Kick-Boxing'
+    category:     'Kickboxing'
       })
 kevin.remote_photo_url = url
 kevin.save!
@@ -34,7 +34,7 @@ julien = User.new({
     name:         'Julien',
     city:         'Paris',
     age:           25,
-    category:     'Karaté'
+    category:     'Karate'
   })
 julien.remote_photo_url = url
 julien.save!
@@ -47,7 +47,7 @@ thomas = User.new({
     name:         'Thomas',
     city:         'Paris',
     age:           30,
-    category:     'Catch'
+    category:     'Jiu Jitsu'
   })
 thomas.remote_photo_url = url
 thomas.save!
@@ -61,7 +61,7 @@ sami = User.new({
     name:         'Sami',
     city:         'Paris',
     age:           18,
-    category:     'Karaté'
+    category:     'Karate'
   })
 sami.remote_photo_url = url
 sami.save!
@@ -75,7 +75,7 @@ beatrijs = User.new({
     name:         'Beatrijs',
     city:         'Reims',
     age:           50,
-    category:     'Danse Orientale'
+    category:     'Oriental Dance'
   })
 beatrijs.remote_photo_url = url
 beatrijs.save!
@@ -103,7 +103,7 @@ esther = User.new({
     name:         'Esther',
     city:         'Paris',
     age:           20,
-    category:     'Yoga'
+    category:     'Boxing'
   })
 esther.remote_photo_url = url
 esther.save!
@@ -131,7 +131,7 @@ gabriel = User.new({
     name:         'Gabriel',
     city:         'Paris',
     age:           28,
-    category:     'Ultimate Frisbee'
+    category:     'Frisbee'
   })
 gabriel.remote_photo_url = url
 gabriel.save!
@@ -143,9 +143,9 @@ guillaume = User.new({
     email:        'guillaume@gmail.com',
     password:     'cbhhhfg',
     name:         'Guillaume',
-    city:         'Bordeaux',
+    city:         'Paris',
     age:           30,
-    category:     'Funboard'
+    category:     'Salsa'
   })
 guillaume.remote_photo_url = url
 guillaume.save!
@@ -173,7 +173,7 @@ mathieu = User.new({
     name:         'Mathieu',
     city:         'Bordeaux',
     age:           18,
-    category:     'Claquettes'
+    category:     'Bodybuilding'
   })
 mathieu.remote_photo_url = url
 mathieu.save!
@@ -186,99 +186,99 @@ puts 'Finished Users!'
 puts 'Creating services...'
 
 Service.create!({
-    name:         'Kick-Boxing',
-    description:  'Professeur de sports de combats depuis 10 ans',
+    name:         'Learn the best Kickboxing techniques',
+    description:  'You will learn the fundamentals of Kickboxing and go beyond! By focusing on proper techniques and good form, you can avoid common training mistakes and become a feared Kickboxing fighter!',
     price:         35,
-    address:      'Centre multisports, 5 place de la République, 750010 Paris',
-    category:     'Sports de combat',
+    address:      'FitnessPark République, 5 Place de la République, 75010 Paris',
+    category:     'Kickboxing',
     user:          kevin
   })
 Service.create!({
-    name:         'Karaté',
-    description:  '5°Dan et Champion du monde de karaté avec l\'Équipe de France, j\'entraine des personnes de tous âges (à partir de 3 ans, ado, adulte, sénior…), avec différents besoins et des athlètes de haut niveau.',
+    name:         'The Philosophy of Karate and beyond!',
+    description:  'Delve deep into the world of the martial arts philosophy and learn how this art form involves the mind and spirit as much the body. Meditation and the practice of Courtesy are essential!',
     price:         60,
-    address:      'Stade le Wagon, 16 villa Godelet, 750011 Paris',
-    category:     'Sports de combat',
+    address:      'Le Wagon Cellar, 16 Villa Gaudelet, 75011 Paris',
+    category:     'Karate',
     user:         julien
   })
 Service.create!({
-    name:         'Catch',
-    description:  'Diplôme Fédéral, préparateur mental spécialisé dans le conditionnement au combat.Formé par des experts internationaux.Par ailleurs pratiquant de boxe thaï, et de JJB ce qui me permet d\'avoir un panel de connaissances complet.',
+    name:         'Master the Japanese art of ground-fighting',
+    description:  'BJJ teaches you how even as the smaller and weaker of two fighters, you can successfully defend yourself against any opponent. This is ideal for all self-defense situations!',
     price:         40,
-    address:      'Gymnase de la Porte d\'Italie, 13 boulevard d\'Italie, 750013 Paris',
-    category:     'Sports de combat',
+    address:      'Gymnase de la Porte d\'Italie, 13 Boulevard d\'Italie, 75013 Paris',
+    category:     'Jiu Jitsu',
     user:         thomas
   })
 Service.create!({
-    name:         'Karaté',
-    description:  'Certifié en Karaté, j\'interviens pour former les forces de l\'ordre en séminaires sous forme de stages.',
+    name:         'Become a real Karateka',
+    description:  'Become one of 100 million Kareteka worldwide and learn the fundamentals of this martial art including punching, kicking, knee strikes and open-hand techniques. Release energy with a purpose!',
     price:         50,
     address:      'Stade Olympique, 251 boulevard Exelmans, 75016 Paris',
-    category:     'Sports de combat',
+    category:     'Karate',
     user:         sami
   })
 Service.create!({
-    name:         'Danse Orientale',
-    description:  'Formée à l\'académie de Danse du Caire',
+    name:         'Dazzle like a true Belly Dancer!',
+    description:  'Learn how to dance and dazzle like the Arabian queens! This dance is all about gracious and fluid movements and lots of fun! Join me!',
     price:         40,
-    address:      'Conservatoire de Danse, 51 boulevard Henri Vasnier, 51000 Reims',
-    category:     'Danse',
+    address:      'Conservatoire de Danse, 51 Boulevard Henri Vasnier, 51000 Reims',
+    category:     'Oriental Dance',
     user:         beatrijs
   })
 Service.create!({
-    name:         'Crossfit',
-    description:  'Coaching personnalisé, au programme : renforcement musculaire, cardio-training + suivi nutritionnel et méditation guidée sur Paris et région parisienne.',
+    name:         'Get fit and beat your goals!',
+    description:  'You will receive a custom programme, tailored to your needs! Combining elements of HIIT, weightlifting, plyometrics and powerlifting, you will beat the big guys in no time!',
     price:         30,
-    address:      'Stade municipal, route de la plage, 31000 Toulouse',
-    category:     'Remise en forme',
+    address:      'Stade municipal, Route de la Plage, 31000 Toulouse',
+    category:     'Crossfit',
     user:         céline
   })
 Service.create!({
-    name:         'Yoga',
-    description:  'Diplômée en Hatha yoga traditionnel, yoga pré-post natal, éducatrice de santé.',
+    name:         'Learn how to land a punch',
+    description:  'Join the ring, throw a punch and score a TKO! This fast-paced combat sport is for everyone who want to follow in the impressive footsteps of real champions!',
     price:         35,
-    address:      'Espace Yoga, 60 rue Edith Piaf, 75020 Paris',
-    category:     'Relaxation et Méditation',
+    address:      'Club Boxe, 14 Rue d\'Abbeville, 75010 Paris',
+    category:     'Boxing',
     user:         esther
   })
 Service.create!({
-    name:         'Zumba',
-    description:  'Enchantée, Je suis Mélanie, Votre ZIN (Zumba Instructor Network). Ensemble, nous allons Danser, transpirer et surtout nous amuser.',
+    name:         'Dance your way to fit!',
+    description:  'With lots of fun salsa, samba, merengue and hip-hop music to energize you, you will enjoy melting away those extra pounds and get fit in no time!',
     price:         25,
-    address:      'Centre multisports, 5 place de la république, 69001 Lyon',
-    category:     'Danse',
+    address:      'Centre Multisports, 20 Avenue de la République, 69001 Lyon',
+    category:     'Zumba',
     user:         mélanie
   })
 Service.create!({
-    name:         'Ultimate Frisbee',
-    description:  'Professeur Diplômé du Beach Sports Academy à Sydney, Australie',
+    name:         'Impress your next date with fancy Frisbee skills!',
+    description:  'Whether in the parc or on the beach, learn the art and skill behind throwing and catching. With my help you will make it look easy and fun and impress anyone by your side! ',
     price:         30,
     address:      'Grande Pelouse du Bois de Vincennes, 75012 Paris',
-    category:     'Sports d\'extérieur',
+    category:     'Frisbee',
     user:         gabriel
   })
  Service.create!({
-    name:         'Funboard',
-    description:  'Envolez-vous avec moi ! un coach de windsurf et Stand Up Paddle expérimenté et passionné autant par la pratique des sports de glisse que par leur enseignement.',
+    name:         'Learn one of the most popular forms of modern dance - Salsa!',
+    description:  'Join me and learn how to move smoothly, rhythmically and with lots of attitude. Plus we will dance to the best salsa music! Join me for a fun-filled hour of dance!',
     price:         35,
-    address:      'Plage des surfeurs, route de la plage, 34000 Bordeaux',
-    category:     'Sports d\'extérieur',
+    address:      'La Pachanga, 8 Rue Vandamme, 75014 Paris',
+    category:     'Salsa',
     user:         guillaume
   })
 Service.create!({
-    name:         'Yoga',
-    description:  'Après 5 ans de pratique, ma passion pour la philosophie du Yoga m’a conduite à Goa en Inde pour y être certifiée professeur de Yoga par la Yoga Alliance (RYS 200H).Riche de cette expérience, je veux partager avec vous mon savoir et mon amour pour cette pratique.',
+    name:         'Yoga, Meditation & Mindfulness',
+    description:  'Practice mindfulness, relaxation and become a real yogi. You learn proper breathing techniques, poses ranging from beginner to advanced and become flexible!',
     price:         25,
-    address:      'Centre multisports, 5 place de la République, 750010 Paris',
-    category:     'Relaxation et Méditation',
+    address:      'Le Wagon, 16 Villa Gaudelet, 75011 Paris',
+    category:     'Yoga',
     user:         claire
   })
 Service.create!({
-    name:         'Claquettes',
-    description:  'Elève de Gene Kelly je vous fais danser sous la pluie',
+    name:         'Compete with Arnie!',
+    description:  'You want to become strong and impressive like Arnold Schwarzenegger? Join me now and grow bigger, stronger and healthier with tips from a real pro.',
     price:         40,
-    address:      'Centre Culturel, 45 avenue Carnot, 34000 Bordeaux',
-    category:     'Danse',
+    address:      'Magic Forme Gym, 45 avenue Carnot, 34000 Bordeaux',
+    category:     'Bodybuilding',
     user:         mathieu
   })
 
