@@ -10,9 +10,15 @@
     </h2>
 
     <div class="dashboard row">
+
       <div class="calender">
-        <p> CALENDAR </p>
+        <div class="book">
+        <h3>Calendar</h3>
+         <%= image_tag "calender.png", class: "calender_img" %>
       </div>
+      </div>
+
+
       <div class="booking">
         <div class="book">
         <h3>My Bookings</h3>
@@ -23,7 +29,8 @@
             <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
                 <div class="card-product-infos">
                   <h2><%= booking.service.name%></h2>
-                  <p><%=booking.service.description%> <strong>relevant info</strong> only <%= booking.service.user.name  %></p>
+                  <p><%=booking.service.description%>
+                    with <%= booking.service.user.name  %></p>
                 </div>
           </div>
           <% end %>
