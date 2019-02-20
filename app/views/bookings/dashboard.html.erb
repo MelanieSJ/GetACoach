@@ -1,6 +1,55 @@
-<h1>My Dashbaord</h1>
+<div class="wrapper">
+<div class="container">
 
-<h2>
-<% if user_signed_in? %>Hello <%= current_user.name%>
-<% end  %>
-</h2>
+    <h1>My Dashboard</h1>
+
+    <h2>
+      <% if user_signed_in? %>
+        Hello <%= current_user.name%>
+      <% end  %>
+    </h2>
+
+    <div class="dashboard row">
+      <div class="calender">
+        <p> CALENDAR </p>
+      </div>
+      <div class="booking">
+        <div class="book">
+        <h3>My Bookings</h3>
+        </div>
+        <div class="details_booking">
+          <% @bookings.each do |booking| %>
+          <div class="card-product">
+            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+                <div class="card-product-infos">
+                  <h2><%= booking.service.name%></h2>
+                  <p><%=booking.service.description%> <strong>relevant info</strong> only <%= booking.service.user.name  %></p>
+                </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+<!-- <div class="flex-container">
+  <p>just a try</p>
+
+
+
+  <div class="flex-item">
+     <p>just a try</p>
+
+
+  </div>
+  <div class="flex-item">...</div>
+  <div class="flex-item">...</div>
+</div> -->
+
+
+
