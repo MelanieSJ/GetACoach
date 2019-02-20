@@ -1,0 +1,25 @@
+<div class="container">
+  <h1> Resultats de la recherche</h1>
+  <div class="service-card-container">
+    <% @services.each do |service| %>
+      <div class="service-card-box" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= service.category %>.jpg');">
+        <div class="service-title">
+          <%= service.name %>
+        </div>
+        <div class="service-card-infos">
+          <%= image_tag "https://via.placeholder.com/50", class: "service-card-avatar-small" %>
+          <div class="service-card-details">
+            <p><%= service.user.name %></p>
+            <p><%= service.description %></p>
+            <p><%= service.address %></p>
+          </div>
+          <div class="service-card-validation text-center">
+            <p><%= service.price %>€</p>
+            <%= link_to "Réserver", "#", class: "btn btn-default service-card-button-resa" %>
+          </div>
+          <%= link_to "", service_path(service), class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
