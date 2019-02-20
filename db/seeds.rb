@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts 'Deleting all bookings..'
+User.destroy_all
+
 puts 'Deleting all users..'
 User.destroy_all
 
@@ -185,7 +188,7 @@ puts 'Finished Users!'
 
 puts 'Creating services...'
 
-Service.create!({
+kevin_service = Service.create!({
     name:         'Kick-Boxing',
     description:  'Professeur de sports de combats depuis 10 ans',
     price:         35,
@@ -193,7 +196,7 @@ Service.create!({
     category:     'Sports de combat',
     user:          kevin
   })
-Service.create!({
+julien_service = Service.create!({
     name:         'Karaté',
     description:  '5°Dan et Champion du monde de karaté avec l\'Équipe de France, j\'entraine des personnes de tous âges (à partir de 3 ans, ado, adulte, sénior…), avec différents besoins et des athlètes de haut niveau.',
     price:         60,
@@ -201,7 +204,7 @@ Service.create!({
     category:     'Sports de combat',
     user:         julien
   })
-Service.create!({
+thomas_service = Service.create!({
     name:         'Catch',
     description:  'Diplôme Fédéral, préparateur mental spécialisé dans le conditionnement au combat.Formé par des experts internationaux.Par ailleurs pratiquant de boxe thaï, et de JJB ce qui me permet d\'avoir un panel de connaissances complet.',
     price:         40,
@@ -209,7 +212,7 @@ Service.create!({
     category:     'Sports de combat',
     user:         thomas
   })
-Service.create!({
+sami_service = Service.create!({
     name:         'Karaté',
     description:  'Certifié en Karaté, j\'interviens pour former les forces de l\'ordre en séminaires sous forme de stages.',
     price:         50,
@@ -217,7 +220,7 @@ Service.create!({
     category:     'Sports de combat',
     user:         sami
   })
-Service.create!({
+beatrijs_service = Service.create!({
     name:         'Danse Orientale',
     description:  'Formée à l\'académie de Danse du Caire',
     price:         40,
@@ -225,7 +228,7 @@ Service.create!({
     category:     'Danse',
     user:         beatrijs
   })
-Service.create!({
+céline_service = Service.create!({
     name:         'Crossfit',
     description:  'Coaching personnalisé, au programme : renforcement musculaire, cardio-training + suivi nutritionnel et méditation guidée sur Paris et région parisienne.',
     price:         30,
@@ -233,7 +236,7 @@ Service.create!({
     category:     'Remise en forme',
     user:         céline
   })
-Service.create!({
+esther_service = Service.create!({
     name:         'Yoga',
     description:  'Diplômée en Hatha yoga traditionnel, yoga pré-post natal, éducatrice de santé.',
     price:         35,
@@ -241,7 +244,7 @@ Service.create!({
     category:     'Relaxation et Méditation',
     user:         esther
   })
-Service.create!({
+melanie_service = Service.create!({
     name:         'Zumba',
     description:  'Enchantée, Je suis Mélanie, Votre ZIN (Zumba Instructor Network). Ensemble, nous allons Danser, transpirer et surtout nous amuser.',
     price:         25,
@@ -249,7 +252,7 @@ Service.create!({
     category:     'Danse',
     user:         mélanie
   })
-Service.create!({
+gabriel_service = Service.create!({
     name:         'Ultimate Frisbee',
     description:  'Professeur Diplômé du Beach Sports Academy à Sydney, Australie',
     price:         30,
@@ -257,7 +260,7 @@ Service.create!({
     category:     'Sports d\'extérieur',
     user:         gabriel
   })
- Service.create!({
+ guillaume_service = Service.create!({
     name:         'Funboard',
     description:  'Envolez-vous avec moi ! un coach de windsurf et Stand Up Paddle expérimenté et passionné autant par la pratique des sports de glisse que par leur enseignement.',
     price:         35,
@@ -265,7 +268,7 @@ Service.create!({
     category:     'Sports d\'extérieur',
     user:         guillaume
   })
-Service.create!({
+claire_service = Service.create!({
     name:         'Yoga',
     description:  'Après 5 ans de pratique, ma passion pour la philosophie du Yoga m’a conduite à Goa en Inde pour y être certifiée professeur de Yoga par la Yoga Alliance (RYS 200H).Riche de cette expérience, je veux partager avec vous mon savoir et mon amour pour cette pratique.',
     price:         25,
@@ -273,7 +276,7 @@ Service.create!({
     category:     'Relaxation et Méditation',
     user:         claire
   })
-Service.create!({
+mathieu_service = Service.create!({
     name:         'Claquettes',
     description:  'Elève de Gene Kelly je vous fais danser sous la pluie',
     price:         40,

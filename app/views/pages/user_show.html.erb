@@ -3,7 +3,7 @@
   <p><%= @user.age %></p>
   <p><%= @user.city %></p>
   <div class="flex-item">
-    <%= image_tag "https://via.placeholder.com/200", class: "coach-card-avatar" %>
+    <%= cl_image_tag @user.photo, class: "coach-card-avatar", width: 150, height: 150, crop: :thumb, gravity: :face %>
   </div>
   <p class="flex-item"><%= @user.category %></p>
 </div>
