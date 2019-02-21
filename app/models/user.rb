@@ -10,4 +10,5 @@ class User < ApplicationRecord
   validates :name, presence: true, uniqueness: true
   validates :age, presence: true, inclusion: { in: (18..100) }
   validates :city, presence: true
+
 end
