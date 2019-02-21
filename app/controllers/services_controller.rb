@@ -2,7 +2,20 @@ class ServicesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show, :new, :create]
 
   def index
-    @services = Service.all
+    # @services = Service.all
+    if params[:query].present?
+      sql_query = " \
+        services.name @@ :query \
+        OR services.description @@ :query \
+        OR services.category @@ :query \
+        OR services.city @@ :query \
+      "
+      @services = Service.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @services = Service.all
+    end
+
+
   end
 
   def show
