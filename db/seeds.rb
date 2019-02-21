@@ -288,7 +288,7 @@ claire_service = Service.create!({
   })
 
 mathieu_service = Service.create!({
-    nname:        'Compete with Arnie!',
+    name:        'Compete with Arnie!',
     description:  'You want to become strong and impressive like Arnold Schwarzenegger? Join me now and grow bigger, stronger and healthier with tips from a real pro.',
     price:         40,
     address:      'Magic Forme Gym, 45 avenue Carnot, 34000 Bordeaux',
