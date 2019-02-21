@@ -1,44 +1,39 @@
-<div class="container">
-  <h2><%= @user.name %></h2>
-  <p><%= @user.age %></p>
-  <p><%= @user.city %></p>
-  <div class="flex-item">
-    <%= cl_image_tag @user.photo, class: "coach-card-avatar", width: 150, height: 150, crop: :thumb, gravity: :face %>
-  </div>
-  <p class="flex-item"><%= @user.category %></p>
-</div>
-<div class="row button">
-  <%= link_to "Go back", root_path, class: "btn-coaches text-center" %>
-</div>
-
-
-<h1> Show all your services</h1>
-  <div class="service-card-container">
-    <% @services.each do |service| %>
-      <div class="service-card-box" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('/assets/<%= service.category %>.jpg');">
-        <div class="service-title">
-          <%= service.name %>
-        </div>
-        <div class="service-card-infos">
-          <%= image_tag "https://via.placeholder.com/50", class: "service-card-avatar-small" %>
-          <div class="service-card-details">
-            <p><%= service.user.name %></p>
-            <p><%= service.description %></p>
-            <p><%= service.address %></p>
-            <p><%= service.city %></p>
-          </div>
-          <div class="service-card-validation text-center">
-            <p><%= service.price %>€</p>
-            <%= link_to "Réserver", "#", class: "btn btn-default service-card-button-resa" %>
-          </div>
-          <%= link_to "", service_path(service), class: "card-link" %>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
 <%= link_to "Add a new service", new_service_path, class: "btn btn-default" %>
 <%= link_to "Edit my Profile", edit_user_registration_path %>
 
-
+<div class="container">
+  <div class="row">
+    <div class="profile-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url(<%= image_path 'profile_background.jpg' %>);">
+      <div class="profile-card-description">
+       <h2><%= @user.name %></h2>
+       <p>Age: <%= @user.age %></p>
+       <p>City: <%= @user.city %></p>
+       <p>Specialty: <%= @user.category %></p>
+      </div>
+      <div class="profile-image">
+        <%= cl_image_tag @user.photo, class: "coach-card-avatar", width: 180, height: 180, crop: :thumb, gravity: :face %>
+      </div>
+    </div>
+  </div>
+  <div class="profile-background">
+    <h3>My Background</h3>
+    <p><%= @user.background %></p>
+  </div>
+  <div class="row">
+    <h2> My Services</h2>
+    <div class="profile-service">
+      <% @services.each do |service| %>
+       <div class=profile-service-title>
+        <%= service.name %>
+       </div>
+       <div class="profile-service-info">
+        <p><%= service.description %></p>
+        <p><%= service.address %></p>
+        <p><%= service.price %>€ / hour</p>
+       </div>
+      <% end %>
+      <%= link_to "Book now", new_booking_path, class: "btn-coaches" %>
+      <%= link_to "Return to homepage", root_path, class: "btn-coaches" %>
+    </div>
+  </div>
+</div>
