@@ -198,7 +198,7 @@ charles = User.new({
     email:        'charles@gmail.com',
     password:     '123456',
     name:         'Charles',
-    city:         'Bordeaux',
+    city:         'Paris',
     age:           25,
   })
 
@@ -238,7 +238,7 @@ lise = User.new({
     email:        'lise@gmail.com',
     password:     '123456',
     name:         'Lise',
-    city:         'Bordeaux',
+    city:         'Paris',
     age:           45,
   })
 
@@ -248,7 +248,7 @@ philippe = User.new({
     email:        'philippe@gmail.com',
     password:     '123456',
     name:         'Philippe',
-    city:         'Bordeaux',
+    city:         'Paris',
     age:           41,
   })
 
@@ -264,6 +264,7 @@ kevin_service = Service.create!({
     description:  'You will learn the fundamentals of Kickboxing and go beyond! By focusing on proper techniques and good form, you can avoid common training mistakes and become a feared Kickboxing fighter!',
     price:         35,
     address:      'FitnessPark République, 5 Place de la République, 75010 Paris',
+    city:         'Paris',
     category:     'Kickboxing',
     user:          kevin
   })
@@ -273,6 +274,7 @@ julien_service = Service.create!({
     description:  'Delve deep into the world of the martial arts philosophy and learn how this art form involves the mind and spirit as much the body. Meditation and the practice of Courtesy are essential!',
     price:         60,
     address:      'Le Wagon Cellar, 16 Villa Gaudelet, 75011 Paris',
+    city:         'Paris',
     category:     'Karate',
     user:         julien
   })
@@ -282,6 +284,7 @@ thomas_service = Service.create!({
     description:  'BJJ teaches you how even as the smaller and weaker of two fighters, you can successfully defend yourself against any opponent. This is ideal for all self-defense situations!',
     price:         40,
     address:      'Gymnase de la Porte d\'Italie, 13 Boulevard d\'Italie, 75013 Paris',
+    city:         'Paris',
     category:     'Jiu Jitsu',
     user:         thomas
   })
@@ -291,6 +294,7 @@ sami_service = Service.create!({
     description:  'Become one of 100 million Kareteka worldwide and learn the fundamentals of this martial art including punching, kicking, knee strikes and open-hand techniques. Release energy with a purpose!',
     price:         50,
     address:      'Stade Olympique, 251 boulevard Exelmans, 75016 Paris',
+    city:         'Paris',
     category:     'Karate',
     user:         sami
   })
@@ -299,7 +303,8 @@ beatrijs_service = Service.create!({
     name:         'Dazzle like a true Belly Dancer!',
     description:  'Learn how to dance and dazzle like the Arabian queens! This dance is all about gracious and fluid movements and lots of fun! Join me!',
     price:         40,
-    address:      'Conservatoire de Danse, 51 Boulevard Henri Vasnier, 51000 Reims',
+    address:      'Conservatoire de Danse, 51 Boulevard Henri Vasnier, 75016 Paris',
+    city:         'Paris',
     category:     'Oriental Dance',
     user:         beatrijs
   })
@@ -308,7 +313,8 @@ céline_service = Service.create!({
     name:         'Get fit and beat your goals!',
     description:  'You will receive a custom programme, tailored to your needs! Combining elements of HIIT, weightlifting, plyometrics and powerlifting, you will beat the big guys in no time!',
     price:         30,
-    address:      'Stade municipal, Route de la Plage, 31000 Toulouse',
+    address:      'Stade municipal, 14 boulevard Brune, 75014 Paris',
+    city:         'Paris',
     category:     'Crossfit',
     user:         céline
   })
@@ -318,6 +324,7 @@ esther_service = Service.create!({
     description:  'Join the ring, throw a punch and score a TKO! This fast-paced combat sport is for everyone who want to follow in the impressive footsteps of real champions!',
     price:         35,
     address:      'Club Boxe, 14 Rue d\'Abbeville, 75010 Paris',
+    city:         'Paris',
     category:     'Boxing',
     user:         esther
   })
@@ -326,7 +333,8 @@ melanie_service = Service.create!({
     name:         'Dance your way to fit!',
     description:  'With lots of fun salsa, samba, merengue and hip-hop music to energize you, you will enjoy melting away those extra pounds and get fit in no time!',
     price:         25,
-    address:      'Centre Multisports, 20 Avenue de la République, 69001 Lyon',
+    address:      'Centre Multisports, 20 Avenue de la République, 75011 Paris',
+    city:         'Paris',
     category:     'Zumba',
     user:         mélanie
   })
@@ -336,6 +344,7 @@ gabriel_service = Service.create!({
     description:  'Whether in the parc or on the beach, learn the art and skill behind throwing and catching. With my help you will make it look easy and fun and impress anyone by your side! ',
     price:         30,
     address:      'Grande Pelouse du Bois de Vincennes, 75012 Paris',
+    city:         'Paris',
     category:     'Frisbee',
     user:         gabriel
   })
@@ -345,6 +354,7 @@ gabriel_service = Service.create!({
     description:  'Join me and learn how to move smoothly, rhythmically and with lots of attitude. Plus we will dance to the best salsa music! Join me for a fun-filled hour of dance!',
     price:         35,
     address:      'La Pachanga, 8 Rue Vandamme, 75014 Paris',
+    city:         'Paris',
     category:     'Salsa',
     user:         guillaume
   })
@@ -354,6 +364,7 @@ claire_service = Service.create!({
     description:  'Practice mindfulness, relaxation and become a real yogi. You learn proper breathing techniques, poses ranging from beginner to advanced and become flexible!',
     price:         25,
     address:      'Le Wagon, 16 Villa Gaudelet, 75011 Paris',
+    city:         'Paris',
     category:     'Yoga',
     user:         claire
   })
@@ -362,7 +373,8 @@ mathieu_service = Service.create!({
     name:        'Compete with Arnie!',
     description:  'You want to become strong and impressive like Arnold Schwarzenegger? Join me now and grow bigger, stronger and healthier with tips from a real pro.',
     price:         40,
-    address:      'Magic Forme Gym, 45 avenue Carnot, 34000 Bordeaux',
+    address:      'Magic Forme Gym, 45 avenue Carnot, 75002 Paris',
+    city:         'Paris',
     category:     'Bodybuilding',
     user:         mathieu
   })
