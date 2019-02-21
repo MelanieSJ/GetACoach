@@ -1,20 +1,23 @@
-  <div class="service-card-container-details">
-      <div class="service-card-box-details" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('/assets/<%= @service.category %>.jpg');">
+  <div class="service-card-container">
+      <div class="service-card-box" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('/assets/<%= @service.category %>.jpg');">
         <div class="service-title">
           <%= @service.name %>
         </div>
-        <div class="service-card-infos-details-1">
+        <div class="service-card-infos">
           <%= image_tag "https://via.placeholder.com/50", class: "service-card-avatar-small" %>
-          <div class="service-card-details-details">
+          <div class="service-card-details">
             <p><%= @service.user.name %></p>
             <p><%= @service.description %></p>
             <p><%= @service.address %></p>
+            <p><%= @service.city %></p>
           </div>
-          <div class="service-card-validation-details text-center">
+          <div class="service-card-validation text-center">
             <p><%= @service.price %>€</p>
 
 
-          <%= link_to "<button type='button' class='btn btn-primary' data-toggle='modal' data-target='#exampleModal'>Réservation</button>".html_safe, new_service_path(@service.id)%>
+
+          <%= link_to "Réserver", new_booking_path, class: "btn btn-default service-card-button-resa" %>
+
 
 
           </div>
@@ -22,6 +25,11 @@
       </div>
   </div>
 
+<%= link_to "Edit the service", edit_service_path, class: "btn btn-default" %>
+
+<%= link_to "Delete", service_path(@service),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
 
 
 <!-- Modal -->

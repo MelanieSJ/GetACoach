@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: :home
   def home
+
     @users = User.where.not(category: nil).sample(6)
   end
 
@@ -10,5 +11,7 @@ class PagesController < ApplicationController
 
   def user_show
     @user = User.find(params[:id])
+    @services = Service.where(user_id: current_user.id)
   end
+
 end

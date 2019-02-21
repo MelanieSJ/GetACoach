@@ -1,4 +1,5 @@
 <div class="container">
+
   <h1> Resultats de la recherche</h1>
   <div class="service-card-container">
     <% @services.each do |service| %>
@@ -12,10 +13,11 @@
             <p><%= service.user.name %></p>
             <p><%= service.description %></p>
             <p><%= service.address %></p>
+            <p><%= service.city %></p>
           </div>
           <div class="service-card-validation text-center">
             <p><%= service.price %>€</p>
-            <%= link_to "Réserver", "#", class: "btn btn-default service-card-button-resa" %>
+            <%= link_to "Réserver", new_booking_path, class: "btn btn-default service-card-button-resa" %>
           </div>
           <%= link_to "", service_path(service), class: "card-link" %>
         </div>

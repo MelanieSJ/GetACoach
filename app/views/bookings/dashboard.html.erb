@@ -1,6 +1,17 @@
 <div class="wrapper">
 <div class="container">
 
+
+
+
+
+
+
+ <%= link_to "See my profile", user_path(current_user) %>
+
+
+
+
     <h1>My Dashboard</h1>
 
     <h2>
@@ -31,6 +42,7 @@
                   <h2><%= booking.service.name%></h2>
                   <p><%=booking.date%>
                     with <%= booking.service.user.name  %></p>
+                    <%= link_to "Delete", booking_path(booking), method: :delete %>
                 </div>
           </div>
           <% end %>
@@ -41,6 +53,7 @@
 
   </div>
 </div>
+
 
 
 

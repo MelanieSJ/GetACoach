@@ -10,3 +10,35 @@
 <div class="row button">
   <%= link_to "Go back", root_path, class: "btn-coaches text-center" %>
 </div>
+
+
+<h1> Show all your services</h1>
+  <div class="service-card-container">
+    <% @services.each do |service| %>
+      <div class="service-card-box" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('/assets/<%= service.category %>.jpg');">
+        <div class="service-title">
+          <%= service.name %>
+        </div>
+        <div class="service-card-infos">
+          <%= image_tag "https://via.placeholder.com/50", class: "service-card-avatar-small" %>
+          <div class="service-card-details">
+            <p><%= service.user.name %></p>
+            <p><%= service.description %></p>
+            <p><%= service.address %></p>
+            <p><%= service.city %></p>
+          </div>
+          <div class="service-card-validation text-center">
+            <p><%= service.price %>€</p>
+            <%= link_to "Réserver", "#", class: "btn btn-default service-card-button-resa" %>
+          </div>
+          <%= link_to "", service_path(service), class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to "Add a new service", new_service_path, class: "btn btn-default" %>
+<%= link_to "Edit my Profile", edit_user_registration_path %>
+
+

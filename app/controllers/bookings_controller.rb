@@ -10,20 +10,28 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @booking = Booking.new
+
+  @booking = Booking.new
+
+
+
   end
 
   def edit
   end
 
-  # def create
-  #   @booking = Booking.new(booking_params)
-  #   if @booking.save
-  #     redirect_to booking_path(@booking)
-  #   else
-  #     render :new
-  #   end
-  # end
+  def create
+    @service = Service.find(params[:booking][:service_id].to_i)
+    @user = current_user
+    @booking = Booking.new(booking_params)
+    @booking.service = @service
+    @booking.user = @user
+    if @booking.save
+      redirect_to dashboard_path(current_user)
+    else
+      render :new
+    end
+  end
 
   # def update
   #   respond_to do |format|
@@ -37,7 +45,7 @@ class BookingsController < ApplicationController
 
   def destroy
     @booking.destroy
-    redirect_to bookings_path
+    redirect_to dashboard_path
   end
 
   def dashboard
@@ -51,6 +59,6 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:date)
+    params.require(:booking).permit(:date, :service_id, :user_id)
   end
 end
