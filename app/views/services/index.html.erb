@@ -17,7 +17,7 @@
           </div>
           <div class="service-card-validation text-center">
             <p><%= service.price %>€</p>
-            <%= link_to "Réserver", "#", class: "btn btn-default service-card-button-resa" %>
+            <%= link_to "Réserver", new_booking_path, class: "btn btn-default service-card-button-resa" %>
           </div>
           <%= link_to "", service_path(service), class: "card-link" %>
         </div>

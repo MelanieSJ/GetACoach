@@ -11,6 +11,7 @@
   <%= link_to "Go back", root_path, class: "btn-coaches text-center" %>
 </div>
 
+
 <h1> Show all your services</h1>
   <div class="service-card-container">
     <% @services.each do |service| %>
@@ -38,4 +39,6 @@
 </div>
 
 <%= link_to "Add a new service", new_service_path, class: "btn btn-default" %>
+<%= link_to "Edit my Profile", edit_user_registration_path %>
+
 
