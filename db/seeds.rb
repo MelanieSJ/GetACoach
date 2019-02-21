@@ -20,10 +20,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550595377/mawu1si99nd
 
 kevin = User.new({
     email:        'kevin@gmail.com',
-    password:     'abcdefg',
+    password:     '123456',
     name:         'Kevin',
     city:         'Paris',
     age:           30,
+    background:   'Professional Martial Arts teacher and practitioner for more than 10 years. When not kicking and boxing, I like to code and go to the aquarium. Love fish!',
     category:     'Kickboxing'
       })
 kevin.remote_photo_url = url
@@ -33,10 +34,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550597567/hexlchowxkk
 
 julien = User.new({
     email:        'julien@gmail.com',
-    password:     'klbcdefg',
+    password:     '123456',
     name:         'Julien',
     city:         'Paris',
     age:           25,
+    background:   'Karate World Champion 2002 - I teach all ages and levels of Karate (from 3yrs upwards) and tailor my classes to your needs and goals. Favourite Movie: The Karate Kid. Duh.',
     category:     'Karate'
   })
 julien.remote_photo_url = url
@@ -46,10 +48,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550595693/wwah1liqlgn
 
 thomas = User.new({
     email:        'thomas@gmail.com',
-    password:     'cbcdefg',
+    password:     '123456',
     name:         'Thomas',
     city:         'Paris',
     age:           30,
+    background:   'I have studied and competed in Jiu Jitsu in Kyoto, Rio de Janeiro and Lisbon - trained by internationally acclaimed fighters. My skills in Thai- and Kickboxing, Karate and Judo round off my profile.',
     category:     'Jiu Jitsu'
   })
 thomas.remote_photo_url = url
@@ -60,10 +63,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550597439/okkusjowtvg
 
 sami = User.new({
     email:        'sami@gmail.com',
-    password:     'cbddefg',
+    password:     '123456',
     name:         'Sami',
     city:         'Paris',
     age:           18,
+    background:   'I’m a certified Karateka and normally teach seminars but like to engage more intensely in one-on-one sessions with my clients.',
     category:     'Karate'
   })
 sami.remote_photo_url = url
@@ -74,10 +78,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550597454/eli7jm4yczb
 
 beatrijs = User.new({
     email:        'beatrijs@gmail.com',
-    password:     'cbcdmmmg',
+    password:     '123456',
     name:         'Beatrijs',
-    city:         'Reims',
+    city:         'Paris',
     age:           50,
+    background:   'I learned the art of Oriental Dance at the Academy of Dance in Cairo! Plus, I make the best Bitterballen!',
     category:     'Oriental Dance'
   })
 beatrijs.remote_photo_url = url
@@ -88,10 +93,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550597473/kpxntvfzq9z
 
 céline = User.new({
     email:        'celine@gmail.com',
-    password:     'cbcllfg',
+    password:     '123456',
     name:         'Céline',
-    city:         'Toulouse',
+    city:         'Paris',
     age:           25,
+    background:   'As a two-time Crossfit national champion, I know more WODs than I can count!',
     category:     'Crossfit'
   })
 céline.remote_photo_url = url
@@ -102,10 +108,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550597464/btlwbe4pmfa
 
 esther = User.new({
     email:        'esther@gmail.com',
-    password:     'cbcdddeg',
+    password:     '123456',
     name:         'Esther',
     city:         'Paris',
     age:           20,
+    background:   'Trained by the great Klitschko brothers, I know how to land a decent punch and will teach you in no time!',
     category:     'Boxing'
   })
 esther.remote_photo_url = url
@@ -116,10 +123,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550597483/fpto4593piv
 
 mélanie = User.new({
     email:        'melanie@gmail.com',
-    password:     'cbcnnng',
+    password:     '123456',
     name:         'Mélanie',
-    city:         'Lyon',
+    city:         'Paris',
     age:           20,
+    background:   'Enchantée, I am Mélanie with a passion for fiery music and moves! Together we will dance, sweat and have lots of fun!',
     category:     'Zumba'
   })
 mélanie.remote_photo_url = url
@@ -130,10 +138,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550597640/hgnollcdrhp
 
 gabriel = User.new({
     email:        'gabriel@gmail.com',
-    password:     'cbkjdefg',
+    password:     '123456',
     name:         'Gabriel',
     city:         'Paris',
     age:           28,
+    background:   'Beach Sports are my life! And while there is no beach in Paris, I bring the fun with me and will teach you how to Frisbee your way to fun!',
     category:     'Frisbee'
   })
 gabriel.remote_photo_url = url
@@ -144,10 +153,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550597508/ex8hqfddmdk
 
 guillaume = User.new({
     email:        'guillaume@gmail.com',
-    password:     'cbhhhfg',
+    password:     '123456',
     name:         'Guillaume',
     city:         'Paris',
     age:           30,
+    background:   'After several years in Colombia mastering the arts of Salsa, I now teach in Paris and have brought the good tunes and times with me!',
     category:     'Salsa'
   })
 guillaume.remote_photo_url = url
@@ -158,10 +168,11 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550598327/qsmejnvifym
 
 claire = User.new({
     email:        'claire@gmail.com',
-    password:     'cbcdrrr',
+    password:     '123456',
     name:         'Claire',
     city:         'Paris',
     age:           24,
+    background:   'After 5 years of practicing Yoga, my passion for the philosophy of Yoga have led me to Goa in India, where I became a certified Yogi. I want to share my experience, my knowledge and love for this practice with you!',
     category:     'Yoga'
   })
 claire.remote_photo_url = url
@@ -172,14 +183,74 @@ url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550597518/zrrtksvq0va
 
 mathieu = User.new({
     email:        'mathieu@gmail.com',
-    password:     'cbcdzer',
+    password:     '123456',
     name:         'Mathieu',
-    city:         'Bordeaux',
+    city:         'Paris',
     age:           18,
+    background:   'Lifting 325 lbs easily and still pushing on, I have lifted my way to success. With my experience and advice, there will be no weight too heavy for you to lift out of your way!',
     category:     'Bodybuilding'
   })
 mathieu.remote_photo_url = url
 mathieu.save!
+
+
+charles = User.new({
+    email:        'charles@gmail.com',
+    password:     '123456',
+    name:         'Charles',
+    city:         'Bordeaux',
+    age:           25,
+  })
+
+
+
+kim = User.new({
+    email:        'kim@gmail.com',
+    password:     '123456',
+    name:         'Kim',
+    city:         'Paris',
+    age:           50,
+  })
+
+
+
+maxime = User.new({
+    email:        'maxime@gmail.com',
+    password:     '123456',
+    name:         'Maxime',
+    city:         'Paris',
+    age:           35,
+  })
+
+
+
+sarah = User.new({
+    email:        'sarah@gmail.com',
+    password:     '123456',
+    name:         'Sarah',
+    city:         'Paris',
+    age:           39,
+  })
+
+
+
+lise = User.new({
+    email:        'lise@gmail.com',
+    password:     '123456',
+    name:         'Lise',
+    city:         'Bordeaux',
+    age:           45,
+  })
+
+
+
+philippe = User.new({
+    email:        'philippe@gmail.com',
+    password:     '123456',
+    name:         'Philippe',
+    city:         'Bordeaux',
+    age:           41,
+  })
 
 
 puts 'Finished Users!'
@@ -297,3 +368,103 @@ mathieu_service = Service.create!({
   })
 
 puts 'Finished services!'
+
+
+puts 'Creating bookings...'
+
+Booking.create!({
+    date:         DateTime.now,
+    user:         charles,
+    service:      kevin_service
+  })
+
+Booking.create!({
+    date:         DateTime.now - 1.day,
+    user:         maxime,
+    service:      kevin_service
+  })
+
+Booking.create!({
+    date:         DateTime.now + 3.day,
+    user:         lise,
+    service:      gabriel_service
+  })
+
+Booking.create!({
+    date:         DateTime.now - 3.day,
+    user:         sarah,
+    service:      kevin_service
+  })
+
+Booking.create!({
+    date:         DateTime.now + 2.hour,
+    user:         philippe,
+    service:      gabriel_service
+  })
+
+Booking.create!({
+    date:         DateTime.now - 4.day,
+    user:         kim,
+    service:      kevin_service
+  })
+
+Booking.create!({
+    date:         DateTime.now - 8.hour,
+    user:         kim,
+    service:      gabriel_service
+  })
+
+Booking.create!({
+    date:         DateTime.now - 2.day,
+    user:         kim,
+    service:      beatrijs_service
+  })
+
+Booking.create!({
+    date:         DateTime.now + 8.hour,
+    user:         kim,
+    service:      claire_service
+  })
+
+Booking.create!({
+    date:         DateTime.now - 1.day,
+    user:         kim,
+    service:      guillaume_service
+  })
+
+Booking.create!({
+    date:         DateTime.now - 34.hour,
+    user:         kim,
+    service:      julien_service
+  })
+
+Booking.create!({
+    date:         DateTime.now + 20.hour,
+    user:         sarah,
+    service:      gabriel_service
+  })
+
+Booking.create!({
+    date:         DateTime.now - 7.day,
+    user:         charles,
+    service:      gabriel_service
+  })
+
+Booking.create!({
+    date:         DateTime.now + 1.day,
+    user:         maxime,
+    service:      gabriel_service
+  })
+
+Booking.create!({
+    date:         DateTime.now + 6.hour,
+    user:         julien,
+    service:      gabriel_service
+  })
+
+
+
+
+
+puts 'Finished bookings!'
+
