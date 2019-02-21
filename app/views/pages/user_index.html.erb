@@ -3,7 +3,7 @@
     <h2 class="text-center">Find Your Future Coach</h2>
       <% @users.each do |user|%>
         <div class="col-xs-12 col-lg-4 coach-card">
-            <%= image_tag "https://via.placeholder.com/150", class: "coach-card-avatar" %>
+             <%= cl_image_tag user.photo, class: "coach-card-avatar", width: 150, height: 150, crop: :thumb, gravity: :face %>
             <h4><%=link_to user.name, user_path(user) %></h4>
             <p><%= user.category %></p>
         </div>

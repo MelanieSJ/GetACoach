@@ -7,7 +7,7 @@
           <%= service.name %>
         </div>
         <div class="service-card-infos">
-          <%= image_tag "https://via.placeholder.com/50", class: "service-card-avatar-small" %>
+           <%= cl_image_tag service.user.photo, class: "coach-card-avatar", width: 150, height: 150, crop: :thumb, gravity: :face %>
           <div class="service-card-details">
             <p><%= service.user.name %></p>
             <p><%= service.description %></p>
@@ -23,5 +23,6 @@
     <% end %>
   </div>
 </div>
+
 
 

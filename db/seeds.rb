@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts 'Deleting all bookings..'
+User.destroy_all
+
 puts 'Deleting all users..'
 User.destroy_all
 
@@ -185,7 +188,7 @@ puts 'Finished Users!'
 
 puts 'Creating services...'
 
-Service.create!({
+kevin_service = Service.create!({
     name:         'Learn the best Kickboxing techniques',
     description:  'You will learn the fundamentals of Kickboxing and go beyond! By focusing on proper techniques and good form, you can avoid common training mistakes and become a feared Kickboxing fighter!',
     price:         35,
@@ -193,7 +196,8 @@ Service.create!({
     category:     'Kickboxing',
     user:          kevin
   })
-Service.create!({
+
+julien_service = Service.create!({
     name:         'The Philosophy of Karate and beyond!',
     description:  'Delve deep into the world of the martial arts philosophy and learn how this art form involves the mind and spirit as much the body. Meditation and the practice of Courtesy are essential!',
     price:         60,
@@ -201,7 +205,8 @@ Service.create!({
     category:     'Karate',
     user:         julien
   })
-Service.create!({
+
+thomas_service = Service.create!({
     name:         'Master the Japanese art of ground-fighting',
     description:  'BJJ teaches you how even as the smaller and weaker of two fighters, you can successfully defend yourself against any opponent. This is ideal for all self-defense situations!',
     price:         40,
@@ -209,7 +214,8 @@ Service.create!({
     category:     'Jiu Jitsu',
     user:         thomas
   })
-Service.create!({
+
+sami_service = Service.create!({
     name:         'Become a real Karateka',
     description:  'Become one of 100 million Kareteka worldwide and learn the fundamentals of this martial art including punching, kicking, knee strikes and open-hand techniques. Release energy with a purpose!',
     price:         50,
@@ -217,7 +223,8 @@ Service.create!({
     category:     'Karate',
     user:         sami
   })
-Service.create!({
+
+beatrijs_service = Service.create!({
     name:         'Dazzle like a true Belly Dancer!',
     description:  'Learn how to dance and dazzle like the Arabian queens! This dance is all about gracious and fluid movements and lots of fun! Join me!',
     price:         40,
@@ -225,7 +232,8 @@ Service.create!({
     category:     'Oriental Dance',
     user:         beatrijs
   })
-Service.create!({
+
+céline_service = Service.create!({
     name:         'Get fit and beat your goals!',
     description:  'You will receive a custom programme, tailored to your needs! Combining elements of HIIT, weightlifting, plyometrics and powerlifting, you will beat the big guys in no time!',
     price:         30,
@@ -233,7 +241,8 @@ Service.create!({
     category:     'Crossfit',
     user:         céline
   })
-Service.create!({
+
+esther_service = Service.create!({
     name:         'Learn how to land a punch',
     description:  'Join the ring, throw a punch and score a TKO! This fast-paced combat sport is for everyone who want to follow in the impressive footsteps of real champions!',
     price:         35,
@@ -241,7 +250,8 @@ Service.create!({
     category:     'Boxing',
     user:         esther
   })
-Service.create!({
+
+melanie_service = Service.create!({
     name:         'Dance your way to fit!',
     description:  'With lots of fun salsa, samba, merengue and hip-hop music to energize you, you will enjoy melting away those extra pounds and get fit in no time!',
     price:         25,
@@ -249,7 +259,8 @@ Service.create!({
     category:     'Zumba',
     user:         mélanie
   })
-Service.create!({
+
+gabriel_service = Service.create!({
     name:         'Impress your next date with fancy Frisbee skills!',
     description:  'Whether in the parc or on the beach, learn the art and skill behind throwing and catching. With my help you will make it look easy and fun and impress anyone by your side! ',
     price:         30,
@@ -257,7 +268,8 @@ Service.create!({
     category:     'Frisbee',
     user:         gabriel
   })
- Service.create!({
+
+ guillaume_service = Service.create!({
     name:         'Learn one of the most popular forms of modern dance - Salsa!',
     description:  'Join me and learn how to move smoothly, rhythmically and with lots of attitude. Plus we will dance to the best salsa music! Join me for a fun-filled hour of dance!',
     price:         35,
@@ -265,7 +277,8 @@ Service.create!({
     category:     'Salsa',
     user:         guillaume
   })
-Service.create!({
+
+claire_service = Service.create!({
     name:         'Yoga, Meditation & Mindfulness',
     description:  'Practice mindfulness, relaxation and become a real yogi. You learn proper breathing techniques, poses ranging from beginner to advanced and become flexible!',
     price:         25,
@@ -273,8 +286,9 @@ Service.create!({
     category:     'Yoga',
     user:         claire
   })
-Service.create!({
-    name:         'Compete with Arnie!',
+
+mathieu_service = Service.create!({
+    nname:        'Compete with Arnie!',
     description:  'You want to become strong and impressive like Arnold Schwarzenegger? Join me now and grow bigger, stronger and healthier with tips from a real pro.',
     price:         40,
     address:      'Magic Forme Gym, 45 avenue Carnot, 34000 Bordeaux',
