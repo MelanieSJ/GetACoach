@@ -1,4 +1,5 @@
 <div class="container">
+
   <h1> Resultats de la recherche</h1>
   <div class="service-card-container">
     <% @services.each do |service| %>
@@ -12,6 +13,7 @@
             <p><%= service.user.name %></p>
             <p><%= service.description %></p>
             <p><%= service.address %></p>
+            <p><%= service.city %></p>
           </div>
           <div class="service-card-validation text-center">
             <p><%= service.price %>€</p>
