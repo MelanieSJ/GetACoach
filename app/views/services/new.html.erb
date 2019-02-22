@@ -1,10 +1,6 @@
 <div class="wrapper">
   <div class="container" >
-    <div class="nice-form" style="background-image: url(<%= image_path 'coach.jpg' %>);">
-      <div class="form-only">
-
         <h1>Add a service</h1>
-
         <%= simple_form_for (@service) do |f| %>
           <%= f.input :name %>
           <%= f.input :description %>
@@ -12,16 +8,11 @@
           <%= f.input :address %>
           <%= f.input :category %>
           <%= f.input :city %>
-          <div class="form-actions">
+          <div class="form-actions text-center">
              <%= f.button :submit, class: "btn-suc", value: "OK"%>
-          </div>
-          <br>
-          <div class="form-actions">
-            <%= link_to "Cancel", user_path(current_user.id), class: "btn btn-suc" %>
+             <%= link_to "Cancel", user_path(current_user.id), class: "btn btn-suc" %>
           </div>
         <% end %>
-      </div>
-    </div>
   </div>
 </div>
 
