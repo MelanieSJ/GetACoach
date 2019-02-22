@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :services
 
-  resources :bookings, only: [:index, :new, :create, :destroy]
+  resources :bookings, only: [:index, :new, :create, :destroy, :edit, :update]
   get '/dashboard', to: 'bookings#dashboard'
   get '/users', to: 'pages#user_index'
   get '/user/:id', to: 'pages#user_show', as: :user
