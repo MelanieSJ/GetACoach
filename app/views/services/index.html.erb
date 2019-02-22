@@ -1,6 +1,7 @@
 <div class="container">
 
-  <h1 class=text-center> Search Results</h1>
+  <h1 class=text-center> Find your Coach</h1>
+  <p class=text-center> Search Results</p>
   <div class="service-card-container">
     <% @services.each do |service| %>
       <div class="service-card-box" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),  url('/assets/<%= service.category %>.jpg');">
@@ -13,7 +14,7 @@
             <p><%= service.user.name %></p>
             <p><%= service.description %></p>
             <p><%= service.address %></p>
-            <p><%= service.city %></p>
+            <!-- <p><%= service.city %></p> -->
           </div>
           <div class="service-card-validation text-center">
             <p><%= service.price %>€</p>

@@ -193,6 +193,7 @@ mathieu = User.new({
 mathieu.remote_photo_url = url
 mathieu.save!
 
+url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550795410/zab2w1iwzefd80satn6g.jpg"
 
 charles = User.new({
     email:        'charles@gmail.com',
@@ -201,9 +202,10 @@ charles = User.new({
     city:         'Paris',
     age:           25,
   })
+charles.remote_photo_url = url
+charles.save!
 
-
-
+url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550763512/ipt3ybawcbhjyhhrube9.jpg"
 kim = User.new({
     email:        'kim@gmail.com',
     password:     '123456',
@@ -211,47 +213,52 @@ kim = User.new({
     city:         'Paris',
     age:           50,
   })
+kim.remote_photo_url = url
+kim.save!
 
-
-
-maxime = User.new({
-    email:        'maxime@gmail.com',
+url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550795768/mwzyxbt8mehtcck3clg5.jpg"
+brice = User.new({
+    email:        'brice@gmail.com',
     password:     '123456',
-    name:         'Maxime',
+    name:         'Brice',
     city:         'Paris',
     age:           35,
   })
+brice.remote_photo_url = url
+brice.save!
 
-
-
-sarah = User.new({
-    email:        'sarah@gmail.com',
+url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550795784/yby4bvz4ffut4eev5sjf.jpg"
+ariana = User.new({
+    email:        'ariana@gmail.com',
     password:     '123456',
-    name:         'Sarah',
+    name:         'Ariana',
     city:         'Paris',
     age:           39,
   })
+ariana.remote_photo_url = url
+ariana.save!
 
-
-
-lise = User.new({
-    email:        'lise@gmail.com',
+url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550795757/vlzeavtubnpxefzcxuj8.jpg"
+liz = User.new({
+    email:        'liz@gmail.com',
     password:     '123456',
-    name:         'Lise',
+    name:         'Liz',
     city:         'Paris',
     age:           45,
   })
+liz.remote_photo_url = url
+liz.save!
 
-
-
-philippe = User.new({
-    email:        'philippe@gmail.com',
+url = "https://res.cloudinary.com/dzaa038tu/image/upload/v1550795796/abxob1oowqmzq75itpz5.jpg"
+harry = User.new({
+    email:        'harry@gmail.com',
     password:     '123456',
-    name:         'Philippe',
+    name:         'Harry',
     city:         'Paris',
     age:           41,
   })
-
+harry.remote_photo_url = url
+harry.save!
 
 puts 'Finished Users!'
 
@@ -392,25 +399,25 @@ Booking.create!({
 
 Booking.create!({
     date:         DateTime.now - 1.day,
-    user:         maxime,
+    user:         brice,
     service:      kevin_service
   })
 
 Booking.create!({
     date:         DateTime.now + 3.day,
-    user:         lise,
+    user:         liz,
     service:      gabriel_service
   })
 
 Booking.create!({
     date:         DateTime.now - 3.day,
-    user:         sarah,
+    user:         ariana,
     service:      kevin_service
   })
 
 Booking.create!({
     date:         DateTime.now + 2.hour,
-    user:         philippe,
+    user:         harry,
     service:      gabriel_service
   })
 
@@ -452,7 +459,7 @@ Booking.create!({
 
 Booking.create!({
     date:         DateTime.now + 20.hour,
-    user:         sarah,
+    user:         ariana,
     service:      gabriel_service
   })
 
@@ -464,7 +471,7 @@ Booking.create!({
 
 Booking.create!({
     date:         DateTime.now + 1.day,
-    user:         maxime,
+    user:         brice,
     service:      gabriel_service
   })
 
