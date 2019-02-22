@@ -5,20 +5,12 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control",
-        placeholder: "you want to learn..."
+        placeholder: "Let's get fit in ..."
       %>
     <% end %>
-    <p>search by discipline</p>
-
-    <%= form_tag services_path, method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "... in"
-      %>
-    <% end %>
-    <p>search by city</p>
-
+    <div class="text-search">
+      search by discipline or by city
+    </div>
     <%#= link_to "Search", services_path, class: "btn-coaches text-center" %>
   </div>
 </div>
@@ -30,21 +22,23 @@
     <p>Get A Coach is the most convenient place for you to connect with a personal coach - wherever you are! Are you looking for a coach to push you to run your fastest 10k? Or have you always wanted to learn some fiery Zumba moves? Whatever your goals and interests are, we have the right coach for you!</p>
     <div class="flex-container">
       <div class="flex-item">
-        <a href="#"><i class="fas fa-search"></i>
-          <br class="montserrat">Find a Coach</a>
+        <%= link_to "<i class='fas fa-search'></i>
+          <br class='montserrat'>See all Coaches"
+      .html_safe, users_path, class: "montserrat" %>
       </div>
       <div class="flex-item">
         <a href="#" ><i class="fas fa-user-plus"></i>
           <br class="montserrat">Sign Up</a>
       </div>
       <div class="flex-item">
-        <a href="#" ><i class="fas fa-calendar-check"></i>
-          <br class="montserrat">Book a Session</a>
+        <%= link_to "<i class='fas fa-calendar-check'></i>
+          <br class='montserrat'>Book a Session"
+      .html_safe, services_path, class: "montserrat" %>
       </div>
-      <div class="flex-item">
+<!--       <div class="flex-item">
         <a href="#" ><i class="fas fa-dumbbell"></i>
           <br class="montserrat">Get Fit!</a>
-      </div>
+      </div> -->
     </div>
   </div>
   <h2 class="text-center">Our Coaches</h2>
@@ -56,10 +50,11 @@
         </div>
         <% end %>
     </div>
-    <div class="row button">
+<!--     <div class="row button">
       <%= link_to "See all Coaches", users_path, class: "btn-coaches text-center" %>
-    </div>
+    </div> -->
 </div>
+
 <div class="container">
     <div class="row table">
       <h2 class="text-center">Our Disciplines</h2>

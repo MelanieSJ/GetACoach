@@ -1,24 +1,24 @@
-<div class="container edit-container">
 
-  <h1> Edit your service </h1>
-
-  <%= simple_form_for (@service) do |f| %>
-    <%= f.input :name %>
-
-    <%= f.input :description %>
-
-    <%= f.input :price %>
-
-    <%= f.input :address %>
-
-    <%= f.input :category %>
-
-    <%= f.input :city %>
-
-    <%= f.submit "Save my changes", class: "btn btn-coaches" %>
-  <% end %>
-
-</div>
-<div class="row-link text-center">
-  <%= link_to "Cancel", user_path(current_user.id), class: "btn btn-coaches" %>
-</div>
+<div class="wrapper">
+  <div class="container edit-container" >
+    <div class="nice-form" style="background-image: url(<%= image_path 'coach.jpg' %>);">
+      <div class="form-only">
+        <h1> Edit your service </h1>
+          <%= simple_form_for (@service) do |f| %>
+            <%= f.input :name %>
+            <%= f.input :description %>
+            <%= f.input :price %>
+            <%= f.input :address %>
+            <%= f.input :category %>
+            <%= f.input :city %>
+            <div class="form-actions">
+              <%= f.button :submit, class: "btn-suc", value: "Edit"%>
+            </div>
+            <br>
+            <div class="form-actions">
+              <%= link_to "Cancel", user_path(current_user.id), class: "btn btn-suc" %>
+            </div>
+          <% end %>
+      </div>
+    </div>
+  </div>

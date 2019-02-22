@@ -1,17 +1,28 @@
-<%= simple_form_for (@service) do |f| %>
-  <%= f.input :name %>
+<div class="wrapper">
+  <div class="container" >
+    <div class="nice-form" style="background-image: url(<%= image_path 'coach.jpg' %>);">
+      <div class="form-only">
 
-  <%= f.input :description %>
+        <h1>Add a service</h1>
 
-  <%= f.input :price %>
+        <%= simple_form_for (@service) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :description %>
+          <%= f.input :price %>
+          <%= f.input :address %>
+          <%= f.input :category %>
+          <%= f.input :city %>
+          <div class="form-actions">
+             <%= f.button :submit, class: "btn-suc", value: "OK"%>
+          </div>
+          <br>
+          <div class="form-actions">
+            <%= link_to "Cancel", user_path(current_user.id), class: "btn btn-suc" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <%= f.input :address %>
 
-  <%= f.input :category %>
-
-  <%= f.input :city %>
-
-  <%= f.submit "OK", class: "btn btn-primary" %>
-<% end %>
-
-<%= link_to "Cancel", user_path(current_user.id), class: "btn btn-default" %>
