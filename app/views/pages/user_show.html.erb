@@ -36,6 +36,8 @@
       <% end %>
       <% if current_user.id = @user.id %>
         <%= link_to "Update my service", edit_service_path(@user.services.first), class: "btn-coaches" %>
+        <%= link_to "Delete this service", service_path(@user.services.last), class: "btn-coaches",  method: :delete,
+          data: { confirm: "Are you sure?" } %>
       <% else %>
         <%= link_to "Book now", new_booking_path, class: "btn-coaches" %>
       <% end %>
