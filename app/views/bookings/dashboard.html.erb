@@ -37,7 +37,7 @@
         <div class="details_booking">
           <% @bookings.each do |booking| %>
           <div class="card-product">
-            <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg">
+            <%= image_tag "logo.png", height: 50 %>
                 <div class="card-product-infos">
                   <h2><%= booking.service.name%></h2>
                   <p><%=booking.date%>
