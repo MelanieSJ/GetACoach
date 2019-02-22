@@ -18,6 +18,14 @@ class BookingsController < ApplicationController
   end
 
   def edit
+    @booking = Booking.find(params[:id])
+    @user = current_user
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    redirect_to dashboard_path(current_user)
   end
 
   def create
