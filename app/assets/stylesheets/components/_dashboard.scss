@@ -46,7 +46,9 @@
      background-color: #203b60;
 }
 
-
+.date-calendar{
+  color: pink;
+}
 
 .calender_img{
   size: 100px;
@@ -86,8 +88,11 @@ text-align: center;
 }
 
 .card-product img {
-  width: 120px;
+
   object-fit: cover;
+  width: 66px;
+  height: 70px;
+  margin-left: 30px;
 }
 
 .card-product h2 {
@@ -108,4 +113,8 @@ text-align: center;
   padding: 16px;
 }
 
+.dashboard-card{
+
+
+}
 
