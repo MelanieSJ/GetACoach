@@ -30,53 +30,51 @@
   color: #203b60;
 }
 
-
 .dashboard {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-
+  display: flex;
+  // justify-content: space-around;
+  flex-direction: row;
 }
 
-.calender {
-    flex-grow: 1;
-    width: 50%;
-    margin: 3%;
-    // border: 1px solid green;
-     background-color: #203b60;
+.calendar {
+  flex-grow: 1;
+  width: 50%;
+  margin: 3%;
+  background-color: #203b60;
+  color: white;
+  text-align: center;
 }
 
 .date-calendar{
-  color: pink;
-  margin-top: -310px;
-}
-
-.calender_img{
-  size: 100px;
-  width: 97%;
+  color: #FEAA01;
 }
 
 .booking {
     flex-grow: 1;
     width: 50%;
     margin: 3%;
-    // border: 1px solid red;
+    background-color: #203b60;
+    color: white;
+    text-align: center;
     overflow: scroll;
     background-color: #203b60;
 }
 
-.details_booking{
-  // border: 1px solid yellow;
-
+.btn-book {
+   color: #203b60;
+  border: 2px solid #203b60;
+  top: 50%;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 50px;
+  opacity: 0.6;
 }
 
-.book {
+.btn-book:hover {
   background-color: #203b60;
-color: white;
-text-align: center;
+  color: white;
+  text-decoration: none;
 }
-
-
 
 .card-product {
   overflow: hidden;
@@ -86,6 +84,8 @@ text-align: center;
   display: flex;
   align-items: center;
   margin: 5px;
+  padding-bottom: 15px;
+  padding-top: 15px;
 }
 
 .card-product img {
@@ -112,10 +112,9 @@ text-align: center;
 
 .card-product .card-product-infos {
   padding: 16px;
+  color: #203b60;
 }
 
-.dashboard-card{
-
-
+.button-link {
+  padding-bottom: 10px;
 }
-
