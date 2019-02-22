@@ -11,7 +11,7 @@ class PagesController < ApplicationController
 
   def user_show
     @user = User.find(params[:id])
-    @services = Service.where(user_id: current_user.id)
+    @services = Service.where(user_id: params[:id])
   end
 
 end
