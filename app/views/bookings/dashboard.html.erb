@@ -1,26 +1,24 @@
-<div class="wrapper">
 <div class="container">
+<%= link_to "See my profile", user_path(current_user) %>
+  <div class="row">
+    <div class="dashboard-card" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1)), url(<%= image_path 'dashboard_background.jpg' %>);">
+      <h1>My Dashboard</h1>
+      <div class="profile-image">
+        <% if user_signed_in? %>
+          <%= cl_image_tag current_user.photo, class: "coach-card-avatar", width: 180, height: 180, crop: :thumb, gravity: :face %>
+        <% end %>
+      </div>
+    </div>
+    <div class="welcome">
+      <h2>
+        <% if user_signed_in? %>
+          Hello <%= current_user.name%> !
+        <% end %>
+      </h2>
+    </div>
+  </div>
 
-
-
-
-
-
-
- <%= link_to "See my profile", user_path(current_user) %>
-
-
-
-
-    <h1>My Dashboard</h1>
-
-    <h2>
-      <% if user_signed_in? %>
-        Hello <%= current_user.name%>
-      <% end  %>
-    </h2><p><i class="fas fa-dumbbell"></i></p>
-
-    <div class="dashboard row">
+<div class="dashboard row">
 
       <div class="calender">
         <div class="book">
@@ -60,7 +58,6 @@
 
 
   </div>
-</div>
 
 
 
