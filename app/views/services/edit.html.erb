@@ -1,19 +1,24 @@
-<h1> Edit your service </h1>
+<div class="container edit-container">
 
-<%= simple_form_for (@service) do |f| %>
-  <%= f.input :name %>
+  <h1> Edit your service </h1>
 
-  <%= f.input :description %>
+  <%= simple_form_for (@service) do |f| %>
+    <%= f.input :name %>
 
-  <%= f.input :price %>
+    <%= f.input :description %>
 
-  <%= f.input :address %>
+    <%= f.input :price %>
 
-  <%= f.input :category %>
+    <%= f.input :address %>
 
-  <%= f.input :city %>
+    <%= f.input :category %>
 
-  <%= f.submit "Edit this service", class: "btn btn-primary" %>
-<% end %>
+    <%= f.input :city %>
 
-<%= link_to "Cancel", user_path(current_user.id), class: "btn btn-default" %>
+    <%= f.submit "Save my changes", class: "btn btn-coaches" %>
+  <% end %>
+
+</div>
+<div class="row-link text-center">
+  <%= link_to "Cancel", user_path(current_user.id), class: "btn btn-coaches" %>
+</div>

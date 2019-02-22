@@ -1,5 +1,7 @@
-<%= link_to "Add a new service", new_service_path, class: "btn btn-default" %>
-<%= link_to "Edit my Profile", edit_user_registration_path %>
+<div class="row editing text-center">
+  <%= link_to "Add a new service", new_service_path, class: "btn btn-coaches" %>
+  <%= link_to "Edit my Profile", edit_user_registration_path, class: "btn-coaches" %>
+</div>
 
 <div class="container">
   <div class="row">
@@ -19,8 +21,8 @@
     <h3>My Background</h3>
     <p><%= @user.background %></p>
   </div>
-  <div class="row">
-    <h2> My Services</h2>
+  <div class="row service-description">
+    <h2 text-center> My Services</h2>
     <div class="profile-service">
       <% @services.each do |service| %>
        <div class=profile-service-title>
@@ -28,12 +30,18 @@
        </div>
        <div class="profile-service-info">
         <p><%= service.description %></p>
-        <p><%= service.address %></p>
-        <p><%= service.price %>€ / hour</p>
+        <p>Where: <%= service.address %></p>
+        <p>Price: <%= service.price %>€ / hour</p>
        </div>
       <% end %>
-      <%= link_to "Book now", new_booking_path, class: "btn-coaches" %>
-      <%= link_to "Return to homepage", root_path, class: "btn-coaches" %>
+      <% if current_user.id = @user.id %>
+        <%= link_to "Update my service", edit_service_path(@user.services.first), class: "btn-coaches" %>
+      <% else %>
+        <%= link_to "Book now", new_booking_path, class: "btn-coaches" %>
+      <% end %>
     </div>
+  </div>
+  <div class="row-link text-center">
+    <%= link_to "Return to homepage", root_path, class: "btn-coaches" %>
   </div>
 </div>

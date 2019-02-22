@@ -7,7 +7,7 @@
         <%= f.error_notification %>
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
         <%= f.association :service, collection: Service.all, value_method: :id, label_method: :name%>
-        <%= f.input :date, class: "transperent" %>
+        <%= f.input :date, class: "transparent" %>
         <div class="form-actions">
         <%= f.button :submit, class: "btn-suc", value: "Get fit !"%>
         </div>
@@ -17,7 +17,9 @@
   </div>
 </div>
 
-<%= link_to 'Back', bookings_path %>
+<div class="row text-center">
+  <%= link_to "Back to homepage", root_path, class: "btn btn-suc text-center" %>
+      <%= link_to 'Back to my Dashboard', dashboard_path, class: "btn-suc text-center" %>
 </div>
 
 
