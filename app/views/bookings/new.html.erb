@@ -1,16 +1,25 @@
-<h1>New booking</h1>
-
-
-<%= simple_form_for ([@service, @booking]) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-    <%= f.association :service, collection: Service.all, value_method: :id, label_method: :name %>
-    <%= f.input :date %>
+<div class="wrapper">
+  <div class="container" >
+    <div class="nice-form" style="background-image: url(<%= image_path 'coach.jpg' %>);">
+      <div class="form-only">
+      <h1>Book a Coach</h1>
+        <%= simple_form_for ([@service, @booking]) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+        <%= f.association :service, collection: Service.all, value_method: :id, label_method: :name%>
+        <%= f.input :date, class: "transperent" %>
+        <div class="form-actions">
+        <%= f.button :submit, class: "btn-suc", value: "Get fit !"%>
+        </div>
+        <% end %>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+</div>
 
 <%= link_to 'Back', bookings_path %>
+</div>
+
+
+
+
